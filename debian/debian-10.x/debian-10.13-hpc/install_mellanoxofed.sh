@@ -6,7 +6,7 @@ TARBALL="MLNX_OFED_LINUX-$VERSION-debian10.13-x86_64.tgz"
 MLNX_OFED_DOWNLOAD_URL=https://content.mellanox.com/ofed/MLNX_OFED-${VERSION}/$TARBALL
 MOFED_FOLDER=$(basename ${MLNX_OFED_DOWNLOAD_URL} .tgz)
 
-$COMMON_DIR/download_and_verify.sh $MLNX_OFED_DOWNLOAD_URL "634960b96698f845ccc8974987c71dfeced4553ddc5fb0aa1a79071307cbdd45"
+$COMMON_DIR/download_and_verify.sh $MLNX_OFED_DOWNLOAD_URL "13bdaf830f224145e2320bf6ff0934c27f053a97ef71ce4a960063febb6c430f"
 tar zxvf ${TARBALL}
 
 ./${MOFED_FOLDER}/mlnxofedinstall --add-kernel-support --skip-unsupported-devices-check --without-fw-update
