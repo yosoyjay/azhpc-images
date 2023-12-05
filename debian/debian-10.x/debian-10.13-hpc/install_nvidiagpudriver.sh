@@ -13,13 +13,13 @@ tar -xvf $TARBALL
 
 pushd gdrcopy-${GDRCOPY_VERSION}/packages/
 CUDA=/usr/local/cuda ./build-deb-packages.sh 
-sudo dpkg -i gdrdrv-dkms_${GDRCOPY_VERSION}-1_amd64.Ubuntu18_04.deb
+sudo dpkg -i gdrdrv-dkms_${GDRCOPY_VERSION}-1_amd64.Debian10.deb
 sudo apt-mark hold gdrdrv-dkms
-sudo dpkg -i libgdrapi_${GDRCOPY_VERSION}-1_amd64.Ubuntu18_04.deb
+sudo dpkg -i libgdrapi_${GDRCOPY_VERSION}-1_amd64.Debian10.deb
 sudo apt-mark hold libgdrapi
-sudo dpkg -i gdrcopy-tests_${GDRCOPY_VERSION}-1_amd64.Ubuntu18_04.deb
+sudo dpkg -i gdrcopy-tests_${GDRCOPY_VERSION}-1_amd64.Debian10.deb
 sudo apt-mark hold gdrcopy-tests
-sudo dpkg -i gdrcopy_${GDRCOPY_VERSION}-1_amd64.Ubuntu18_04.deb
+sudo dpkg -i gdrcopy_${GDRCOPY_VERSION}-1_amd64.Debian10.deb
 sudo apt-mark hold gdrcopy
 popd
 
