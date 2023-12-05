@@ -5,15 +5,15 @@ set -ex
 VERSION=$1
 
 case ${VERSION} in
-    1804) NVIDIA_VERSION="525.105.17"; 
+    10) NVIDIA_VERSION="525.105.17"; 
         CUDA_VERSION="12-1"; 
         CUDA_SAMPLES_VERSION="12.1";
         CHECKSUM="c635a21a282c9b53485f19ebb64a0f4b536a968b94d4d97629e0bc547a58142a";; 
-    2004) NVIDIA_VERSION="535.86.10"; 
+    11) NVIDIA_VERSION="535.86.10"; 
         CUDA_VERSION="12-2"; 
         CUDA_SAMPLES_VERSION="12.2";
         CHECKSUM="cec37fd9317091a01fd0380309400a14284769790651fe021e1d5aaa2327a370";;
-    2204) NVIDIA_VERSION="535.86.10"; 
+    12) NVIDIA_VERSION="535.86.10"; 
         CUDA_VERSION="12-2"; 
         CUDA_SAMPLES_VERSION="12.2";
         CHECKSUM="cec37fd9317091a01fd0380309400a14284769790651fe021e1d5aaa2327a370";;
@@ -22,7 +22,7 @@ esac
 
 # Reference - https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation
 # Install Cuda
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu${VERSION}/x86_64/cuda-keyring_1.0-1_all.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/debian${VERSION}/x86_64/cuda-keyring_1.0-1_all.deb
 dpkg -i ./cuda-keyring_1.0-1_all.deb
 
 apt-get update
