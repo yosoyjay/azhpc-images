@@ -2,6 +2,8 @@
 set -ex
 
 # Install Moby Engine and CLI
+# - Need libseccomp2 > 2.5 from backports
+apt install libseccomp2=2.5.1-1~bpo10+1 -t buster-backports
 apt-get install -y moby-engine
 
 # Install NVIDIA Docker
