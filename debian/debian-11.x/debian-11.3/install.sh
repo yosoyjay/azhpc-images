@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+apt install gpg git
+
 # set properties
 source ./set_properties.sh
 

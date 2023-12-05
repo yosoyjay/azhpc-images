@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-$DEBIAN_COMMON_DIR/install_nvidiagpudriver.sh 2004
+$DEBIAN_COMMON_DIR/install_nvidiagpudriver.sh 11
 
 # Install gdrcopy
 sudo apt install -y build-essential devscripts debhelper check libsubunit-dev fakeroot pkg-config dkms
@@ -26,4 +26,4 @@ popd
 $COMMON_DIR/write_component_version.sh "GDRCOPY" ${GDRCOPY_VERSION}
 
 # Install nvidia fabric manager (required for ND96asr_v4)
-$UBUNTU_COMMON_DIR/install_nvidia_fabric_manager.sh 2004
+$DEBIAN_COMMON_DIR/install_nvidia_fabric_manager.sh 11
