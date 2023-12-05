@@ -8,7 +8,7 @@ source ./set_properties.sh
 ./install_utils.sh
 
 # install Lustre client
-$UBUNTU_COMMON_DIR/install_lustre_client.sh
+#$DEBIAN_COMMON_DIR/install_lustre_client.sh
 
 # install mellanox ofed
 ./install_mellanoxofed.sh
@@ -20,10 +20,10 @@ $UBUNTU_COMMON_DIR/install_lustre_client.sh
 ./install_nvidiagpudriver.sh
 
 # Install NCCL
-$UBUNTU_COMMON_DIR/install_nccl.sh
+$DEBIAN_COMMON_DIR/install_nccl.sh
 
 # Install NVIDIA docker container
-$UBUNTU_COMMON_DIR/install_docker.sh
+$DEBIAN_COMMON_DIR/install_docker.sh
 
 # cleanup downloaded tarballs - clear some space
 rm -rf *.tgz *.bz2 *.tbz *.tar.gz *.run *.deb *_offline.sh
@@ -32,10 +32,10 @@ rm -rf /var/intel/ /var/cache/*
 rm -Rf -- */
 
 # Install DCGM
-$UBUNTU_COMMON_DIR/install_dcgm.sh
+$DEBIAN_COMMON_DIR/install_dcgm.sh
 
 # install Intel libraries
-$UBUNTU_COMMON_DIR/install_intel_libs.sh
+$DEBIAN_COMMON_DIR/install_intel_libs.sh
 
 # install diagnostic script
 $COMMON_DIR/install_hpcdiag.sh
@@ -44,16 +44,16 @@ $COMMON_DIR/install_hpcdiag.sh
 $COMMON_DIR/install_azure_persistent_rdma_naming.sh
 
 # optimizations
-$UBUNTU_COMMON_DIR/hpc-tuning.sh
+$DEBIAN_COMMON_DIR/hpc-tuning.sh
 
 # copy test file
 $COMMON_DIR/copy_test_file.sh
 
 # install monitor tools
-$UBUNTU_COMMON_DIR/install_monitoring_tools.sh
+$DEBIAN_COMMON_DIR/install_monitoring_tools.sh
 
 # diable auto kernel updates
-$UBUNTU_COMMON_DIR/disable_auto_upgrade.sh
+$DEBIAN_COMMON_DIR/disable_auto_upgrade.sh
 
 # SKU Customization
 $COMMON_DIR/setup_sku_customizations.sh

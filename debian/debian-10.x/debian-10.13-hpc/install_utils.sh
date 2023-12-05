@@ -3,7 +3,7 @@ set -ex
 
 # Setup microsoft packages repository for moby
 # Download the repository configuration package
-curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > ./microsoft-prod.list
+curl https://packages.microsoft.com/config/debian/10/prod.list > ./microsoft-prod.list
 # Copy the generated list to the sources.list.d directory
 cp ./microsoft-prod.list /etc/apt/sources.list.d/
 # Install the Microsoft GPG public key
@@ -18,7 +18,7 @@ echo "deb http://people.debian.org/~paravoid/python-all buster main" | sudo tee 
 #install apt pckages
 AZCOPY_VERSION="10.16.2"
 AZCOPY_RELEASE_TAG="release20221108"
-$UBUNTU_COMMON_DIR/install_utils.sh ${AZCOPY_VERSION} ${AZCOPY_RELEASE_TAG}
+$DEBIAN_COMMON_DIR/install_utils.sh ${AZCOPY_VERSION} ${AZCOPY_RELEASE_TAG}
 
 apt-get update
 apt-get install -y python3.8
