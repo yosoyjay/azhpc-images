@@ -1,8 +1,8 @@
 #!/bin/bash
 set -ex
 
-VERSION="23.04-1.1.3.0"
-TARBALL="MLNX_OFED_LINUX-$VERSION-debian10-x86_64.tgz"
+VERSION="23.10-0.5.5.0"
+TARBALL="MLNX_OFED_LINUX-$VERSION-debian10.13-x86_64.tgz"
 MLNX_OFED_DOWNLOAD_URL=https://content.mellanox.com/ofed/MLNX_OFED-${VERSION}/$TARBALL
 MOFED_FOLDER=$(basename ${MLNX_OFED_DOWNLOAD_URL} .tgz)
 
