@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+apt install -y gpg
+
 # set properties
 source ./set_properties.sh
 
