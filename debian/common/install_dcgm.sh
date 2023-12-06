@@ -11,7 +11,7 @@ set -ex
 # hardcoding the version for now
 # v3.1.8 is not available for debian 10 in the nvidia repo
 wget https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/datacenter-gpu-manager_3.1.8_amd64.deb
-apt install -y ./datacenter-gpu-manager_3.1.8_amd64.deb
+dpkg -i ./datacenter-gpu-manager_3.1.8_amd64.deb
 
 # Enable the dcgm service
 systemctl --now enable nvidia-dcgm
