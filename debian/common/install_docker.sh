@@ -6,11 +6,12 @@ apt-get install -y moby-engine
 
 # Install NVIDIA Docker
 # Reference: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+# Note: there is no debian version but all the ubuntu versions point to 18.04 repo anyway
 # Setting up NVIDIA Container Toolkit
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | apt-key add - \
-&& curl -s -L https://nvidia.github.io/nvidia-docker/${DISTRIBUTION}/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
+&& curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu18.04/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
 # MIG Capability on A100
-curl -s -L https://nvidia.github.io/nvidia-container-runtime/experimental/${DISTRIBUTION}/nvidia-container-runtime.list | tee /etc/apt/sources.list.d/nvidia-container-runtime.list
+curl -s -L https://nvidia.github.io/nvidia-container-runtime/experimental/ubuntu18.04/nvidia-container-runtime.list | tee /etc/apt/sources.list.d/nvidia-container-runtime.list
 
 apt-get update
 # Install nvidia-docker package

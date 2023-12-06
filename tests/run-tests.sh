@@ -53,6 +53,10 @@ find_distro() {
     then
         local sle_hpc_distro=`find_sle_hpc_distro`
         echo ${sle_hpc_distro}
+    elif [[ $os == "Debian GNU/Linux" ]]
+    then
+        local debian_distro=`find_debian_distro`
+        echo "Debian ${debian_distro}"
     else
         echo "*** Error - invalid distro!"
         exit -1
@@ -77,6 +81,10 @@ find_ubuntu_distro() {
 # Find SUSE Linux Enterprise HPC distro
 find_sle_hpc_distro() {
     echo $(cat /etc/os-release | awk 'match($0, /^PRETTY_NAME="(.*)"/, result) { print result[1] }')
+}
+
+find_debian_distro() {
+    echo $(grep VERSION_ID /etc/os-release | sed -n 's/^VERSION_ID="\(.*\)"$/\1/p')
 }
 
 distro=`find_distro`
@@ -389,6 +397,25 @@ then
     CHECK_AOCL=0
     CHECK_NCCL=1
     CHECK_GCC=0
+    CHECK_DOCKER=1
+elif [[ $distro == "Debian 10"]]
+then
+    HPCX_OMB_PATH=/opt/hpcx-v2.17-gcc-mlnx_ofed-debian10-cuda12-x86_64/ompi/tests/osu-micro-benchmarks-7.2
+    CHECK_HPCX=1
+    CHECK_IMPI_2021=1
+    CHECK_MVAPICH2=1
+    CHECK_MVAPICH2X=0
+    CHECK_OMPI=1
+    CHECK_BLIS_MT=1
+    MODULE_FILES_ROOT=/usr/share/modules/modulefiles
+    MOFED_VERSION=MLNX_OFED_LINUX-23.10-0.5.5.0
+    IMPI2021_PATH=/opt/intel/oneapi/mpi/2021.9.0
+    MVAPICH2_PATH=/opt/mvapich2-2.3.7-1/libexec
+    MVAPICH2X_PATH=
+    OPENMPI_PATH=/opt/openmpi-4.1.5
+    CHECK_AOCL=0
+    CHECK_GCC=0
+    CHECK_NCCL=1
     CHECK_DOCKER=1
 elif [[ $distro == "SUSE Linux Enterprise High Performance Computing 15 SP4" ]]
 then
