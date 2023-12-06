@@ -1,6 +1,6 @@
-# Ubuntu 18.04 HPC Image
+# Debian HPC Image
 
-The Ubuntu 18.04 HPC Image includes optimizations and recommended configurations to deliver optimal performance,
+The Debian HPC Image includes optimizations and recommended configurations to deliver optimal performance,
 consistency, and reliability. This image consists of the following HPC tools and libraries:
 
 - Mellanox OFED
@@ -29,8 +29,28 @@ consistency, and reliability. This image consists of the following HPC tools and
 - NVIDIA-Docker
 - Moneo (Distributed HPC/AI system monitor)
 
+## Updating the kernel
 
-This Image is compliant with the Linux Kernel 5.4.0-1107-azure.
+This kernel version is for Debian 10 4.19.  In order to use a more recent kernel the backports can be used to upgrade to 5.10.  This upgrade must be run followed by a VM reboot before the `install.sh` script here.  To upgrade, run the following:
+
+    apt install -t buster-backports linux-image-amd64
+
+## Building the image
+
+Check out the `azhpc-images` repo with the `debian-10.13`:
+
+    sudo install git gpg
+    # switch to root
+    sudo -i
+    git clone -b debian-10.13 https://github.com/edwardsp/azhpc-images.git
+
+Now run the debian install script:
+
+    cd azhpc-images/debian/debian-10.x/debian-10.13-hpc/
+    ./install.sh 2>&1 | tee install-$(date '+%Y%m%d-%H%M%S').log
+
+
+
 
 Software packages (MPI / HPC libraries) are configured as environment modules. Users can select preferred MPI or software packages as follows:
 

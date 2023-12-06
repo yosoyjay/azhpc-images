@@ -413,6 +413,7 @@ then
     MVAPICH2_PATH=/opt/mvapich2-2.3.7-1/libexec
     MVAPICH2X_PATH=
     OPENMPI_PATH=/opt/openmpi-4.1.5
+    MKL_VERSION=2023.2.0
     CHECK_AOCL=0
     CHECK_GCC=0
     CHECK_NCCL=1
@@ -545,7 +546,7 @@ then
     check_exists "${MODULE_FILES_ROOT}/mpi/hpcx"
 
     module load mpi/hpcx
-    mpirun -np 2 --map-by ppr:2:node -x UCX_TLS=rc ${HPCX_OMB_PATH}/osu_latency
+    mpirun --allow-run-as-root -np 2 --map-by ppr:2:node -x UCX_TLS=rc ${HPCX_OMB_PATH}/osu_latency
     check_exit_code "HPC-X" "Failed to run HPC-X"
     module unload mpi/hpcx
 fi
