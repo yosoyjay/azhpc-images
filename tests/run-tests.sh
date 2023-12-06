@@ -398,7 +398,7 @@ then
     CHECK_NCCL=1
     CHECK_GCC=0
     CHECK_DOCKER=1
-elif [[ $distro == "Debian 10"]]
+elif [[ $distro == "Debian 10" ]]
 then
     HPCX_OMB_PATH=/opt/hpcx-v2.17-gcc-mlnx_ofed-debian10-cuda12-x86_64/ompi/tests/osu-micro-benchmarks-7.2
     CHECK_HPCX=1
