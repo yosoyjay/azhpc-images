@@ -40,6 +40,13 @@
             "url": "https://www.mellanox.com/downloads/DOCA/DOCA_v2.8.0/host/doca-host-2.8.0-204000_24.07_rhel810.x86_64.rpm"
         }
     },
+    "ofed": {
+        "ubuntu22.04": {
+            "version": "24.0.7-06.1.0",
+            "sha256": "37a2d58dbd8619e32e70def79622fab0e81681de7775d6c1d4234cab4560fc5e",
+            "url": "https://content.mellanox.com/ofed/MLNX_OFED-24.07-0.6.1.0/MLNX_OFED_LINUX-24.07-0.6.1.0-ubuntu22.04-x86_64.tgz"
+        }
+    }
     "hpcx": {
         "ubuntu20.04": {
             "version": "2.18",
@@ -96,8 +103,8 @@
             "fabricmanager": {
                 "distribution": "ubuntu2004",
                 "version": "560.35.03-1",
-                "sha256": "ad68065a83e2d3a5b3c3b8121fdc146c2aea5cdcca77b1ab4f9a64ac932be966"        
-            }   
+                "sha256": "ad68065a83e2d3a5b3c3b8121fdc146c2aea5cdcca77b1ab4f9a64ac932be966"
+            }
         },
         "ubuntu22.04": {
             "driver": {
@@ -107,8 +114,8 @@
             "fabricmanager": {
                 "distribution": "ubuntu2204",
                 "version": "560.35.03-1",
-                "sha256": "ad68065a83e2d3a5b3c3b8121fdc146c2aea5cdcca77b1ab4f9a64ac932be966"        
-            }   
+                "sha256": "ad68065a83e2d3a5b3c3b8121fdc146c2aea5cdcca77b1ab4f9a64ac932be966"
+            }
         },
         "almalinux8.7": {
             "driver": {
@@ -118,8 +125,8 @@
             "fabricmanager": {
                 "distribution": "rhel8",
                 "version": "560.35.03-1",
-                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"        
-            }   
+                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"
+            }
         },
         "almalinux8.10": {
             "driver": {
@@ -129,8 +136,8 @@
             "fabricmanager": {
                 "distribution": "rhel8",
                 "version": "560.35.03-1",
-                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"        
-            }   
+                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"
+            }
         },
         "rhel8.10": {
             "driver": {
@@ -140,7 +147,7 @@
             "fabricmanager": {
                 "distribution": "rhel8",
                 "version": "560.35.03-1",
-                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"        
+                "sha256": "881a686f3214fbad464404f6c71dace656cdca841e3abdfd1b04a8e310e797ad"
 	    }
         }
     },
@@ -153,7 +160,7 @@
             "samples": {
                 "version": "12.5",
                 "sha256": "5c40cc096706045b067ec5897f039403014aa7a39b970905698466a2d029b972"
-            }   
+            }
         },
         "ubuntu22.04": {
             "driver": {
@@ -163,7 +170,7 @@
             "samples": {
                 "version": "12.5",
                 "sha256": "5c40cc096706045b067ec5897f039403014aa7a39b970905698466a2d029b972"
-            }   
+            }
         },
         "almalinux8.7": {
             "driver": {
@@ -173,7 +180,7 @@
             "samples": {
                 "version": "12.5",
                 "sha256": "5c40cc096706045b067ec5897f039403014aa7a39b970905698466a2d029b972"
-            }   
+            }
         },
         "almalinux8.10": {
             "driver": {
@@ -183,7 +190,7 @@
             "samples": {
                 "version": "12.5",
                 "sha256": "5c40cc096706045b067ec5897f039403014aa7a39b970905698466a2d029b972"
-            }   
+            }
         },
         "rhel8.10": {
             "driver": {
@@ -193,7 +200,7 @@
             "samples": {
                 "version": "12.5",
                 "sha256": "5c40cc096706045b067ec5897f039403014aa7a39b970905698466a2d029b972"
-            }   
+            }
         }
     },
     "gdrcopy": {
@@ -278,7 +285,7 @@
             "aocc": {
                 "version": "4.2.0",
                 "sha256": "ed5a560ec745b24dc0685ccdcbde914843fb2f2dfbfce1ba592de4ffbce1ccab"
-            } 
+            }
         }
     },
     "rocm": {
