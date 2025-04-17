@@ -14,7 +14,7 @@ $COMMON_DIR/download_and_verify.sh $OFED_URL $OFED_SHA256
 tar zxvf ${OFED_FILE}
 OFED_FOLDER=$(basename ${OFED_FILE} .tgz)
 
-./${OFED_FOLDER}/mlnxofedinstall --add-kernel-support --skip-unsupported-devices-check --without-fw-update --with nvmf
+./${OFED_FOLDER}/mlnxofedinstall --add-kernel-support --skip-unsupported-devices-check --without-fw-update --with-nvmf
 $COMMON_DIR/write_component_version.sh "OFED" $OFED_VERSION
 
 /etc/init.d/openibd restart
