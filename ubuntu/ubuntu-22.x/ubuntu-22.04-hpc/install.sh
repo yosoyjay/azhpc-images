@@ -32,8 +32,10 @@ $UBUNTU_COMMON_DIR/remove_unused_packages.sh
 # install Lustre client
 $UBUNTU_COMMON_DIR/install_lustre_client.sh
 
+# Disabled to hardcode install of OFED with nvmf as workaround
 # install DOCA OFED
-$UBUNTU_COMMON_DIR/install_doca.sh
+# $UBUNTU_COMMON_DIR/install_doca.sh
+$UBUNTU_COMMON_DIR/install_ofed.sh
 
 # install PMIX
 $UBUNTU_COMMON_DIR/install_pmix.sh
@@ -44,10 +46,10 @@ $UBUNTU_COMMON_DIR/install_mpis.sh
 if [ "$GPU" = "NVIDIA" ]; then
     # install nvidia gpu driver
     ./install_nvidiagpudriver.sh
-    
+
     # Install NCCL
     $UBUNTU_COMMON_DIR/install_nccl.sh
-    
+
     # Install NVIDIA docker container
     $UBUNTU_COMMON_DIR/install_docker.sh
 fi
@@ -115,7 +117,7 @@ if [ "$GPU" = "AMD" ]; then
 
     #install rocm software stack
     ./install_rocm.sh
-    
+
     #install rccl and rccl-tests
     ./install_rccl.sh
 fi

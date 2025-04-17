@@ -46,7 +46,7 @@
             "sha256": "37a2d58dbd8619e32e70def79622fab0e81681de7775d6c1d4234cab4560fc5e",
             "url": "https://content.mellanox.com/ofed/MLNX_OFED-24.07-0.6.1.0/MLNX_OFED_LINUX-24.07-0.6.1.0-ubuntu22.04-x86_64.tgz"
         }
-    }
+    },
     "hpcx": {
         "ubuntu20.04": {
             "version": "2.18",
