@@ -12,7 +12,7 @@ OFED_FILE=$(basename ${OFED_URL})
 $COMMON_DIR/download_and_verify.sh $OFED_URL $OFED_SHA256
 
 tar zxvf ${OFED_FILE}
-OFED_FOLDER=$(basename ${MLNX_OFED_DOWNLOAD_URL} .tgz)
+OFED_FOLDER=$(basename ${OFED_FILE} .tgz)
 
 ./${OFED_FOLDER}/mlnxofedinstall --add-kernel-support --skip-unsupported-devices-check --without-fw-update --with nvmf
 $COMMON_DIR/write_component_version.sh "OFED" $OFED_VERSION
