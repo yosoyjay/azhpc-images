@@ -11,8 +11,7 @@ source $UBUNTU_COMMON_DIR/setup_lustre_repo.sh
 
 apt-get update
 # Version not available in repo
-#apt-get install -y amlfs-lustre-client-${LUSTRE_VERSION}=$(uname -r)
-apt-get install -y amlfs-lustre-client-${LUSTRE_VERSION}
+apt-get install -y amlfs-lustre-client-${LUSTRE_VERSION}=$(uname -r)
 apt-mark hold amlfs-lustre-client-${LUSTRE_VERSION}
 
 $COMMON_DIR/write_component_version.sh "LUSTRE" ${LUSTRE_VERSION}
